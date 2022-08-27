@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 10
-'{:d} {"Battery street"}'.format(number)
+number = 98
+print(f"{number} Battery street\n")
