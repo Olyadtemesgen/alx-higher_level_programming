@@ -7,5 +7,5 @@ def remove_char_at(str, n):
         elif s > n:
             new_str += str[s]
         else:
-            pass;
-    return '{}'.format(new_str)        
+            pass
+    return '{}'.format(new_str)
