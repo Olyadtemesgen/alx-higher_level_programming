@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 str = "Holberton School"
-f"{str}{str}{str}"
-f"{str:.9}"
+print(f"{str}{str}{str}")
+print(f"{str:.9}")
