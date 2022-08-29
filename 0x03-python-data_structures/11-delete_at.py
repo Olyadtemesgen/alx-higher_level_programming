@@ -9,5 +9,6 @@ def delete_at(my_list=[], idx=0):
                 new_list.append(my_list[x])
             elif x > idx:
                 new_list.append(my_list[x])
-    my_list = new_list 
+    del my_list[idx]
+    my_list = new_list.copy()
     return my_list
