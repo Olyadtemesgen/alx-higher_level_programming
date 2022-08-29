@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-from a.py import ab
+from a import ab
 print('{}'.format(ab))
