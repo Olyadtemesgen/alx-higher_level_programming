@@ -6,4 +6,4 @@ def max_integer(my_list=[]):
     for x in my_list[1:]:
         if x > largest:
             largest = x
-    return largest
+    return '{:d}'.format(largest)
