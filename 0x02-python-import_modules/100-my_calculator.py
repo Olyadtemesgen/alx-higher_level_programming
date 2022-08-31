@@ -1,24 +1,45 @@
 #!/usr/bin/python3
-if __name__ == '__main__':
-    from calculator_1 import add, sub, mul, div
-    import sys
-    l = len(sys.argv)
-    if l != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+if __name__ == "__main__":
+    from sys import argv
+    from calculator_1 import *
+    count = len(argv)
+
+    if count != 4:
+        print("Usage: {} <a> <operator> <b>".format(argv[0]))
         exit(1)
-    else:
-        if sys.argv[2]  not in '+-*/':
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
-        else:
-            a = int(sys.argv[1])
-            b = int(sys.argv[3])
-            if sys.argv[2] == '+':
-                print('{:d} {} {:d} = {:d}'.format(a, sys.argv[2], b, add(a, b) ))
-            elif sys.argv[2] == '-':
-                print('{:d} {} {:d} = {:d}'.format(a, sys.argv[2], b, sub(a, b) ))
-            elif sys.argv[2] == '*':
-                print('{:d} {} {:d} = {:d}'.format(a, sys.argv[2], b, mul(a, b) ))
-            elif sys.argv[2] == '/':
-                print('{:d} {} {:d} = {:d}'.format(a, sys.argv[2], b, div(a, b) ))
-            exit(0)
+
+    num1 = int(argv[1])
+    num2 = int(argv[3])
+    op = argv[2]
+
+    def not_found():
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+
+    def add_():
+        total = add(num1, num2)
+        print("{:d} + {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    def sub_():
+        total = sub(num1, num2)
+        print("{:d} - {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    def mul_():
+        total = mul(num1, num2)
+        print("{:d} * {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    def div_():
+        total = div(num1, num2)
+        print("{:d} / {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    options = {
+        "+": add_,
+        "-": sub_,
+        "*": mul_,
+        "/": div_
+    }
+    options.get(op, not_found)()
