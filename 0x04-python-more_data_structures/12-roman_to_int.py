@@ -13,17 +13,3 @@ def roman_to_int(roman_string):
     if len(list_roman) > 2 or len(list_roman) == 1:
         number += dict1[final]
     return number
-roman_number = "X"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "VII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "IX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "LXXXVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "DCXIX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
