@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def square_matrix_map(matrix=[]):
     square = list(map(lambda a: a**2, matrix[0]))
     square2 = list(map(lambda a: a**2, matrix[1]))
