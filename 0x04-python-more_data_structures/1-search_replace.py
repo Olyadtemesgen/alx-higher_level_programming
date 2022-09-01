@@ -5,5 +5,5 @@ def search_replace(my_list, search, replace):
         if my_list[x] != search:
             new.append(my_list[x])
         else:
-            new.append(replace)            
+            new.append(replace)
     return new
