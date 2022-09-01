@@ -7,4 +7,6 @@ def weight_average(my_list=[]):
         number += my_list[x][1]
     if number != 0:
         answer = sum / number
-    return answer
+        return number
+    else:
+        return 0
