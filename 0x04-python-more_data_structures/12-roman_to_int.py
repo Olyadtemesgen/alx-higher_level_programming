@@ -1,15 +1,13 @@
 def roman_to_int(roman_string):
-    dict1 = {'M':1000, 'D':500, 'C':100, 'L':50, 'X':10, 'V':5, 'I':1, 'A':0}
-    roman = "MDCLXVI"
-    number = 0
-    list_roman = list(roman_string)
-    final = list_roman[len(list_roman) - 1]
-    for chars in list_roman[:len(list_roman) - 1]:
-        if roman.index(chars) - roman.index(list_roman[list_roman.index(chars) + 1]) >= 1:
-            number = number - dict1[chars] + dict1[list_roman[list_roman.index(chars) + 1]]
-            list_roman[list_roman.index(chars):list_roman.index(chars) + 2] = 'A'
+    if roman_string is None or type(roman_string) != str:
+        return 0
+    data = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    numbers = [data[x] for x in roman_string] + [0]
+    result = 0
+    for num in range(len(roman_string) - 1):
+        if numbers[num] >= numbers[num + 1]:
+            result += numbers[num]
         else:
-            number += dict1[chars]
-    if len(list_roman) > 2 or len(list_roman) == 1:
-        number += dict1[final]
-    return number
+            result -= numbers[num]
+    result += numbers[len(roman_number) - 1]
+    return result
