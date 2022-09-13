@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 class Square:
+    """Square implementation
+    """
     def __init__(self, size=0):
-        from math import sqrt
-        try:
-            sqrt(size)
-            self.__size = size
-        except ValueError:
-            print("size must be >= 0")
-        except TypeError:
-            print("size must be an integer")
+        if type(size) != int:
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = size
