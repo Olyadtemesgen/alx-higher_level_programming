@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """
-This module defines everythin
+This module defines a Square class and initialise its size
 """
+
+
 class Square:
-    """
-    this is the other thig
+    """Square implementation
     """
     def __init__(self, size):
-        """
-        this is the other
-        """
         self.__size = size
