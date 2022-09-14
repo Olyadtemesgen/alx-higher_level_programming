@@ -62,7 +62,7 @@ class SinglyLinkedList:
         while 1:
             txt += str(node.data)
             node = node.next_node
-            if node.next_node is None:
+            if node is None:
                 break
             else:
                 txt += '\n'
