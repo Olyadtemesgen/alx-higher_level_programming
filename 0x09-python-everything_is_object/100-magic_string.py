@@ -12,4 +12,4 @@ def call_counter(func):
 
 @call_counter
 def magic_string():
-    return 'Holberton, ' * (magic_string.calls - 1) + 'Holberton'
+    return 'BestSchoolssss, ' * (magic_string.calls - 1) + 'BestSchool'
