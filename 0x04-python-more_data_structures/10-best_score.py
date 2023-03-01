@@ -7,4 +7,7 @@ def best_score(a_dictionary):
     for key, val in a_dictionary.items():
         if a_dictionary[value] < val:
             value = key
+            
+    if value:
+        return value
     return value
